@@ -9,7 +9,7 @@ function App() {
   const [horizon, setHorizon] = useState(4);
 
   useEffect(() => {
-    axios.get(`http://127.0.0.1:5000/api/data?horizon=${horizon}`)
+    axios.get(`https://forecast-monitoring-app.onrender.com/api/data?horizon=${horizon}`)
       .then(res => {
         const formatted = res.data.map(item => ({
           ...item,
